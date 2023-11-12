@@ -1,0 +1,100 @@
+\documentclass[
+	%a4paper, % Use A4 paper size
+	letterpaper, % Use US letter paper size
+]{jdf}
+
+\usepackage{subcaption}
+\usepackage{float}
+
+\addbibresource{references.bib}
+
+\author{Team Supreme: Cassandra C. Lung, Benjamin J. Weber, Matheo Xenakis, Drew Shoemaker, Ann Katz}
+\title{CS6750 Team Project Check-In 1: Needfinding}
+\email{clung7@gatech.edu, bweber34@gatech.edu, mxenakis3@gatech.edu, sshoemaker7@gatech.edu, akatz43@gatech.edu}
+
+\begin{document}
+%\lsstyle
+
+\maketitle
+\section{Context}
+One of our members, Matheo Xenakis, evaluated a mobile fitness tracking app called "Strong" over the course of the M assignments. The Strong app allows fitness enthusiasts and other gym-goers to track their workouts, and they may use templates to customize workouts to a certain degree beforehand. In the last M assignment, it was found that needfinding research specific to user customization of templates and/or personalization of feedback or other application aspects may be a crucial requirement to some users. The current templating system lacks customization of specific exercises, variations of exercises, and metrics many users want. Our needfinding goal is to further explore the importance of that requirement to users, the ways in which personalization or customization are desired, and to use that data to determine if or how the interface may be redesigned according to that need.
+
+\section{Needfinding plans}
+\subsection{Plan 1: Interviews}
+Fitness enthusiasts who use the Strong app to track progress and gym-goers who use other tools or methods to track workouts will be interviewed to determine why they track workouts, how specific/detailed they want that tracking method to be, what personalizations/customizations regarding planning, logging, and feedback they expect, and how important that customization feature is to them.
+
+The data inventory items to be addressed include users' identities, their goals, their needs, and their tasks/subtasks. Questions aren't set in stone, and some questions may be omitted or expanded upon depending on the user, their current method of tracking, and their time. The overall goal is to listen to and understand their most crucial needs related to tracking workouts.
+To mitigate biases related to leading questions, however, only questions from the question pool will be asked. To mitigate biases related to social desirability, questions have been designed to be answered in an open-ended way (there is no "good" or "bad" answer) and questions will be asked in a neutral tone of voice.
+
+\begin{table}[H] % [h] forces the table to be output where it is defined in the code (it suppresses floating)
+	\caption{Question topics and example questions}
+	\small % Reduce font size
+	\centering % Centre the table
+	\begin{tabular}{L{0.30\linewidth} L{0.56\linewidth}}
+		\textbf{Topic} & \textbf{Questions} \\
+		\toprule[0.5pt]
+		User Demographics & Age?\\
+		(Who are the users?) & Gender?\\
+		\midrule
+		Fitness/General goals & What are your fitness goals?\\
+		(What are their goals, needs, tasks, contexts?)& Can you describe any specific challenges you face in achieving your fitness goals or staying on track?\\
+		& Do you work out solo, in a group or in a class? (+ at home, in a gym, or elsewhere?)\\
+		& What types of workouts do you currently do and how often?\\
+		& To what degree would you say your workouts vary in terms of exercise type/reps/sets?\\
+		\midrule
+		Strong-specific questions & Can you take me through how you typically use the Strong app during your workout?\\
+		(What are the tasks/subtasks of current Strong app users?)& Are there any frustrations or difficulties you've encountered with the Strong app?\\
+		& When you first used the app, were you able to easily discover all the features of the app? What do you use the most?\\
+		& What changes to Strong would better support your current workout habits and goals?\\
+		\midrule
+		Personalization and Customization goals & To what level of detail would you like to track your workouts? Does your current method allow you to document workouts to that level or are there data entry limitations?\\
+		(What are their goals and needs related to this specific task? How important are they?)& Are there unique or specific metrics you wish to track during your workouts (for example: pausing duration in squats, angle of lift, heart rate variability during different exercises)?\\
+		& Does your current workout tool give you personalized feedback, suggestions, or metrics based on what you've entered? How important is this to you?\\
+		& Do you have a specific fitness goal, and would you like your tracking tool to consider this when providing feedback/metrics/recommendations?\\
+		& Are you following a specific diet, and would you like your tracking tool to consider this when providing/metrics/recommendations?\\
+	\end{tabular}
+\end{table}
+
+\subsection{Plan 2: Survey}
+Survey participants will be sourced from the CS 6750 classroom among students who regularly work out. The survey will allows us to gather larger amounts of user data regarding how frequently they track their workouts, how often the perform exercises with variations, and will provide information on subtasks that users often encounter while working out, such as how often users are required to modify their planned workout due to the level of business at their gym, fatigue, or injury. The goal of the survey is to understand how users both track and plan their fitness routines in order to inform a redesign of the Strong application's workout template system.
+
+\begin{table}[H] % [h] forces the table to be output where it is defined in the code (it suppresses floating)
+	\caption{Survey questions, input types, and rationale}
+	\small % Reduce font size
+	\centering % Centre the table
+	\begin{tabular}{L{0.30\linewidth} L{0.25\linewidth} L{0.41\linewidth}}
+		\textbf{Question} & \textbf{Response Type} & \textbf{Rationale} \\
+		\toprule[0.5pt]
+            What is your age? & Ratio input & Establishing age demographic data of users \\
+		\midrule
+            What is your gender? & Free input & Establishing gender demographic data of users \\
+            \midrule
+            How often do you perform resistance training? & Frequency & Provides data inventory for establishing who our most regular users may be based on how often they workout in a way that the interface can track \\
+            \midrule
+            How often do you record your workouts? & Frequency & Provides data inventory for establishing who our most regular users may be, based on their workout recording habits  \\
+            \midrule
+            What recording methods do you use?  & Multiple checkboxes: Notebook, smartwatch, mobile app, None, Other & Helps us understand alternative interfaces that aid the user in accomplishing their tasks. \\
+            \midrule
+            How many exercise routines do utilize in your fitness routines? (This could be a push/pull/leg routine, Workout A/B/C days, or zero routines if no workout plans are used) & Ratio input & This gathers data on how many workout plans users typical need to account for within their fitness routines. \\
+            \midrule
+            How often do you perform workouts with multiple variations? (e.g.standard  back squats and squats with lifted heels, bench press and bench press with tempo timing) & Frequency & Gathers information on the subtasks within a user’s workout.  \\
+            \midrule
+            Provide an example of a workout variation you perform & Free input & Followup question to the above to gather qualitative data on user workout habits. \\
+            \midrule
+            How often are you required to modify your workout plan during your workout? & Frequency & This question gathers information on potential obstacles that users need to overcome while using the interface \\
+            \midrule
+            What are the most common reasons you must modify your workout plan? & Multiple checkboxes: Equipment is occupied already, Injury, Fatigue, Unable to finish work out as planned & Gathers additional qualitative on the above question \\
+            \midrule
+            If you selected other to the above question, please explain & Free input & Followup question to collect data on scenarios the survey did not anticipate  \\
+            \midrule
+            If you use a fitness tracking mobile application, how often are you unable to find the exact exercise you wish to add to your template? & Discrete Ordinal & Qualitatively gauge ubiquity of customizability issue \\
+            \midrule
+            To what extent do you agree with the statement: "a major shortcoming of fitness tracking applications is that I cannot input variations to specific workouts." (tempo timing, lifted heels, etc.)? & Discrete Ordinal Data & Qualitatively gauge impact of customizability issue on individual users. \\
+            \midrule
+            If you have started, and then stopped using mobile fitness tracking apps, to what extent was the rigidity of exercise inputs a reason for your stoppage? & Discrete Ordinal Data & Qualitatively gauge impact of customizability issue on individual users. \\
+            \midrule
+            To what extent do you agree with the statement "One of the major shortcomings of fitness tracking applications is that it takes a long time to locate the exact workout to add to my template" & Discrete Ordinal Data & Helps to qualitatively weigh the impact of the task of locating exercises taking a long time against the impact of not being able to find exact variations. (Adding new variations to an exercises menu can increase the time to locate a single exercise) \\
+	\end{tabular}
+\end{table}
+
+\end{document}
