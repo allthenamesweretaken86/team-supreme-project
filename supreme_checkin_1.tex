@@ -24,8 +24,7 @@ One of our members, Matheo Xenakis, evaluated a mobile fitness tracking app call
 Fitness enthusiasts who use the Strong app to track progress and gym-goers who use other tools or methods to track workouts will be interviewed to determine why they track workouts, how specific/detailed they want that tracking method to be, what personalizations/customizations regarding planning, logging, and feedback they expect, and how important that customization feature is to them.
 
 The data inventory items to be addressed include users' identities, their goals, their needs, and their tasks/subtasks. Questions aren't set in stone, and some questions may be omitted or expanded upon depending on the user, their current method of tracking, and their time. The overall goal is to listen to and understand their most crucial needs related to tracking workouts.
-To mitigate biases related to leading questions, however, only questions from the question pool will be asked. To mitigate biases related to social desirability, questions have been designed to be answered in an open-ended way (there is no "good" or "bad" answer) and questions will be asked in a neutral tone of voice.
-
+To mitigate biases related to leading questions, however, only questions from the question pool will be asked. To mitigate biases related to social desirability, questions have been designed to be answered in an open-ended way (there is no "good" or "bad" answer) and questions will be asked in a neutral tone of voice. To provide sufficient data for the first design we are targetting 10 interviews. 
 \begin{table}[H] % [h] forces the table to be output where it is defined in the code (it suppresses floating)
 	\caption{Question topics and example questions}
 	\small % Reduce font size
@@ -56,8 +55,8 @@ To mitigate biases related to leading questions, however, only questions from th
 \end{table}
 
 \subsection{Plan 2: Survey}
-Survey participants will be sourced from the CS 6750 classroom among students who regularly work out. The survey will allows us to gather larger amounts of user data regarding how frequently they track their workouts, how often the perform exercises with variations, and will provide information on subtasks that users often encounter while working out, such as how often users are required to modify their planned workout due to the level of business at their gym, fatigue, or injury. The goal of the survey is to understand how users both track and plan their fitness routines in order to inform a redesign of the Strong application's workout template system.
-
+Survey participants will be sourced from the CS 6750 classroom among students who regularly work out. The survey will allows us to gather larger amounts of user data regarding how frequently they track their workouts, how often the perform exercises with variations, and will provide information on subtasks that users often encounter while working out, such as how often users typically modify their planned workout due to the level of business at their gym, fatigue, or injury. The goal of the survey is to understand how users both track and plan their fitness routines in order to inform a redesign of the Strong application's workout template system.
+We expect our survey to provide more quantifiable and provable data than the interviews. To create a more conclusive understanding of the problemspace for the first design we are targetting 25 survey responses.
 \begin{table}[H] % [h] forces the table to be output where it is defined in the code (it suppresses floating)
 	\caption{Survey questions, input types, and rationale}
 	\small % Reduce font size
@@ -75,13 +74,13 @@ Survey participants will be sourced from the CS 6750 classroom among students wh
             \midrule
             What recording methods do you use?  & Multiple checkboxes: Notebook, smartwatch, mobile app, None, Other & Helps us understand alternative interfaces that aid the user in accomplishing their tasks. \\
             \midrule
-            How many exercise routines do utilize in your fitness routines? (This could be a push/pull/leg routine, Workout A/B/C days, or zero routines if no workout plans are used) & Ratio input & This gathers data on how many workout plans users typical need to account for within their fitness routines. \\
+            During a typical workout session, how many exercise routines do perform? (This could be a push/pull/leg routine, upper or lower body or zero routines if no workout plans are used) & Ratio input & This gathers data on how many workout plans users typical need to account for within their fitness routines. \\
             \midrule
             How often do you perform workouts with multiple variations? (e.g.standard  back squats and squats with lifted heels, bench press and bench press with tempo timing) & Frequency & Gathers information on the subtasks within a user’s workout.  \\
             \midrule
             Provide an example of a workout variation you perform & Free input & Followup question to the above to gather qualitative data on user workout habits. \\
             \midrule
-            How often are you required to modify your workout plan during your workout? & Frequency & This question gathers information on potential obstacles that users need to overcome while using the interface \\
+            How often do you modify your workout plan during your workout? & Frequency & This question gathers information on potential obstacles that users need to overcome while using the interface \\
             \midrule
             What are the most common reasons you must modify your workout plan? & Multiple checkboxes: Equipment is occupied already, Injury, Fatigue, Unable to finish work out as planned & Gathers additional qualitative on the above question \\
             \midrule
@@ -94,6 +93,8 @@ Survey participants will be sourced from the CS 6750 classroom among students wh
             If you have started, and then stopped using mobile fitness tracking apps, to what extent was the rigidity of exercise inputs a reason for your stoppage? & Discrete Ordinal Data & Qualitatively gauge impact of customizability issue on individual users. \\
             \midrule
             To what extent do you agree with the statement "One of the major shortcomings of fitness tracking applications is that it takes a long time to locate the exact workout to add to my template" & Discrete Ordinal Data & Helps to qualitatively weigh the impact of the task of locating exercises taking a long time against the impact of not being able to find exact variations. (Adding new variations to an exercises menu can increase the time to locate a single exercise) \\
+			\midrule
+            How much time do you typically spend on a mobile interface excersize routine? & Quantitative & Seeks to quantitatively understand the popularity of using a device during a workout with or without workout tracking.\\
 	\end{tabular}
 \end{table}
 
